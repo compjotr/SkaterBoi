@@ -3,14 +3,17 @@ module.exports = {
     "env": {
         "es6": true,
         "node": true,
-        "browser": true
+        "browser": true,
+        "jest/globals": true
     },
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended"
+      "plugin:react/recommended",
+      "plugin:jest/recommended"
     ],
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
     "rules": {
         "linebreak-style": [

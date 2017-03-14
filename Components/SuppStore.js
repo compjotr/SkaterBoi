@@ -4,7 +4,7 @@ class SuppStore {
 	@observable supps = [];
 
   constructor() {
-		console.log(this.supps);
+		return;
   }
 
 	addSupp(supp, time) {

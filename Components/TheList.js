@@ -17,6 +17,10 @@ class Row extends Component{
   }
 }
 
+Row.propTypes = {
+  rowData: React.PropTypes.object
+};
+
 @observer
 class TheList extends Component {
   constructor(props) {
@@ -37,6 +41,10 @@ class TheList extends Component {
     );
   }
 }
+
+TheList.propTypes = {
+  store: React.PropTypes.object
+};
 const styles = StyleSheet.create(
 {
   list:{
