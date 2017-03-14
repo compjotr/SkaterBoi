@@ -23,7 +23,7 @@ export default class SuppMan extends Component {
     this.setState({text});
   }
   onPressButton(){
-    console.log("pikk greia");
+    console.log('pikk greia');
     this.setState({textShow: this.state.text});
     store.addSupp(this.state.text, new Date().getTime());
   }

@@ -16,7 +16,7 @@ export default class Button extends Component {
           </Text>
         </TouchableHighlight>
       </View>
-    )
+    );
   }
 
 }
