@@ -5,28 +5,27 @@ import {
   View,
   TextInput,
 } from 'react-native';
-import Button from './Button.js'
-import TheList from './TheList.js'
+import Button from './Button.js';
+import TheList from './TheList.js';
 
-import SuppStore from './SuppStore.js'
-store = new SuppStore();
+import SuppStore from './SuppStore.js';
+const store = new SuppStore();
 
 export default class SuppMan extends Component {
-
   constructor(props){
     super(props);
     this.state={
       text:'',
-      textShow:'asd'
-    }
+      textShow:'asd',
+    };
   }
   onChange(text){
     this.setState({text});
   }
   onPressButton(){
     console.log("pikk greia");
-    this.setState({textShow: this.state.text})
-    store.addSupp(this.state.text, new Date().getTime())
+    this.setState({textShow: this.state.text});
+    store.addSupp(this.state.text, new Date().getTime());
   }
   render() {
     return (
