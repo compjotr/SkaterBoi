@@ -12,7 +12,7 @@ export default class Button extends Component {
       <View>
         <TouchableHighlight onPress={() => this.props.onPressPenis()}>
           <Text style={styles.button}>
-              Pikk
+              PikkPANIS
           </Text>
         </TouchableHighlight>
       </View>

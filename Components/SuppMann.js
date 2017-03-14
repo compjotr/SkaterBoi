@@ -7,10 +7,9 @@ import {
 } from 'react-native';
 import Button from './Button.js'
 import TheList from './TheList.js'
-import SuppStore from './SuppStore.js'
 
-store = new SuppStore()
-store.addSupp("hei", new Date().getTime());
+import SuppStore from './SuppStore.js'
+store = new SuppStore();
 
 export default class SuppMan extends Component {
 
@@ -27,11 +26,12 @@ export default class SuppMan extends Component {
   onPressButton(){
     console.log("pikk greia");
     this.setState({textShow: this.state.text})
+    store.addSupp(this.state.text, new Date().getTime())
   }
   render() {
     return (
       <View style={styles.container}>
-        <TheList/>
+        <TheList store={store}/>
         <TextInput
           style={styles.textStyle}
           value={this.state.text}
@@ -49,8 +49,6 @@ const styles = StyleSheet.create(
 {
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   textStyle: {

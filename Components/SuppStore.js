@@ -1,6 +1,6 @@
 import {observable} from "mobx";
 
-export default class SuppStore {
+class SuppStore {
 	@observable supps = [];
 
   constructor() {
@@ -15,3 +15,4 @@ export default class SuppStore {
 		});
 	}
 }
+export default SuppStore;
