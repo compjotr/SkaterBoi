@@ -5,7 +5,7 @@ import {
   View,
   ListView
 } from 'react-native';
-import {observer} from 'mobx-react/native'
+import {observer} from 'mobx-react/native';
 
 class Row extends Component{
   render(){
@@ -13,8 +13,12 @@ class Row extends Component{
       <View>
         <Text>{this.props.rowData.timestamp}</Text>
       </View>
-    )
+    );
   }
+}
+
+Row.propTypes = {
+  rowData: React.PropTypes.object
 };
 
 @observer
@@ -34,10 +38,13 @@ class TheList extends Component {
         dataSource={ds.cloneWithRows(store.supps.slice())}
         renderRow={(rowData) => <Row rowData={rowData}/>}
       />
-    )
+    );
   }
-
 }
+
+TheList.propTypes = {
+  store: React.PropTypes.object
+};
 const styles = StyleSheet.create(
 {
   list:{

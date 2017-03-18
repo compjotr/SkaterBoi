@@ -16,14 +16,13 @@ export default class SuppMan extends Component {
     super(props);
     this.state={
       text:'',
-      textShow:'asd',
+      textShow:'asssd',
     };
   }
   onChange(text){
     this.setState({text});
   }
   onPressButton(){
-    console.log("pikk greia");
     this.setState({textShow: this.state.text});
     store.addSupp(this.state.text, new Date().getTime());
   }
@@ -36,7 +35,9 @@ export default class SuppMan extends Component {
           value={this.state.text}
           onChangeText={(text) => this.onChange(text)}
         />
-        <Button onPressPenis={()=>this.onPressButton()}/>
+        <Button onPress={()=>this.onPressButton()}>
+          Halla
+        </Button>
         <Text>{this.state.textShow}</Text>
       </View>
 
