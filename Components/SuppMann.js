@@ -35,7 +35,9 @@ export default class SuppMan extends Component {
           value={this.state.text}
           onChangeText={(text) => this.onChange(text)}
         />
-        <Button onPress={()=>this.onPressButton()}/>
+        <Button onPress={()=>this.onPressButton()}>
+          Halla
+        </Button>
         <Text>{this.state.textShow}</Text>
       </View>
 

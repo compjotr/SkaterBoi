@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Index Android renders correctly 1`] = `
 <View
   style={
     Object {
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
           }
         }
       >
-        PikkPANIS
+        Halla
       </Text>
     </View>
   </View>

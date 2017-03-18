@@ -12,7 +12,7 @@ export default class Button extends Component {
       <View>
         <TouchableHighlight onPress={() => this.props.onPress()}>
           <Text style={styles.button}>
-              PikkPANIS
+            {this.props.children}
           </Text>
         </TouchableHighlight>
       </View>
@@ -21,7 +21,8 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
-  onPress: React.PropTypes.func
+  onPress: React.PropTypes.func,
+  children: React.PropTypes.any
 };
 
 const styles = StyleSheet.create(
