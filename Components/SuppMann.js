@@ -26,6 +26,11 @@ export default class SuppMan extends Component {
     console.log("pikk greia");
     this.setState({textShow: this.state.text});
     store.addSupp(this.state.text, new Date().getTime());
+
+  }
+  onPressVagina(){
+    store.removeSupp//okay. har lagd funksjon som fjerner en supp i lista. har prøvd å lage knapp som fjerner, men mulig bøg
+    //mangler også hvordan man velger hvilken supp som skal fjernes, siden removesupp tar inn en supp som argument
   }
   render() {
     return (
@@ -36,6 +41,7 @@ export default class SuppMan extends Component {
           value={this.state.text}
           onChangeText={(text) => this.onChange(text)}
         />
+        <Button onPressVagina={()=>this.onPressButtonRemove()}/>
         <Button onPressPenis={()=>this.onPressButton()}/>
         <Text>{this.state.textShow}</Text>
       </View>

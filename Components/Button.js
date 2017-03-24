@@ -15,6 +15,12 @@ export default class Button extends Component {
               PikkPANIS
           </Text>
         </TouchableHighlight>
+
+        <TouchableHighlight onPressButtonRemove{() => this.props.onPressVagina()}>
+          <Text style={styles.button}>
+            VaginaPANIS
+            </Text>
+        </TouchableHighlight>
       </View>
     )
   }
